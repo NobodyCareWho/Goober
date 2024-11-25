@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "gooblet",
+  "version": "${version}",
+  "name": "Gooblet",
+  "description": "A mod that adds various tools and weapons",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/gooblet/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.goober.gooblet.client.GoobletClient"
+    ],
+    "main": [
+      "org.goober.gooblet.Gooblet"
+    ]
+  },
+  "mixins": [
+    "gooblet.mixins.json",
+    {
+      "config": "gooblet.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
